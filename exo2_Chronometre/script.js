@@ -3,20 +3,29 @@ const start = document.getElementById("start");
 const stop = document.getElementById("stop");
 const zero = document.getElementById("zero");
 
+
 let minutes = 0;
 let seconds = 0;
 let milliseconds = 0;
 let timer;
 
 function stopWatch () {
-    milliseconds++;
-    if (milliseconds > 99) {
-        seconds++;
+    if (milliseconds < 100) {
+        milliseconds++;
+    }
+    else {
         milliseconds = 0;
-
-        if (seconds > 59) {
-            minutes++;
+        if (seconds < 60) {
+            seconds++;
+        }
+        else {
             seconds = 0;
+            if (minutes < 60) {
+                minutes++;
+            }
+            else {
+                minutes = 0;
+            }
         }
     }
     chrono.innerHTML = isLessThan10(minutes) + ":" + isLessThan10(seconds) + ":" + isLessThan10(milliseconds);
@@ -42,7 +51,7 @@ function isLessThan10 (i) {
     return i;
 }
 
-
 start.addEventListener("click", stopWatch);
 stop.addEventListener("click", pause);
 zero.addEventListener("click", reset);
+
