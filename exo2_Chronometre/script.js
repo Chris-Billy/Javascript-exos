@@ -3,24 +3,23 @@ const start = document.getElementById("start");
 const stop = document.getElementById("stop");
 const zero = document.getElementById("zero");
 
-
 let minutes = 0;
 let seconds = 0;
 let milliseconds = 0;
 let timer;
 
 function stopWatch () {
-    if (milliseconds < 100) {
+    if (milliseconds < 99) {
         milliseconds++;
     }
     else {
         milliseconds = 0;
-        if (seconds < 60) {
+        if (seconds < 59) {
             seconds++;
         }
         else {
             seconds = 0;
-            if (minutes < 60) {
+            if (minutes < 59) {
                 minutes++;
             }
             else {
@@ -37,7 +36,6 @@ function pause () {
 }
 
 function reset () {
-    clearTimeout(timer);
     chrono.innerHTML = "00:00:00";
     minutes = 0;
     seconds = 0;
