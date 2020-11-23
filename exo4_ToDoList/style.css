@@ -1,6 +1,60 @@
 * {
     text-align: center;
-    font-size: 50px;
     background-color: rgb(36, 36, 36);
     color: white;
+}
+
+#saisie {
+    width: 35%;
+    font-size: 30px;
+    text-align: left;
+    padding: 10px;
+    padding-left: 20px;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+button {
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 15px;
+    border: 2px solid white;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+i {
+    font-size: 25px !important;
+    margin-left: 10px;
+}
+
+i:hover {
+    cursor: pointer;
+}
+
+.fa-plus-circle {
+    color: rgba(0, 255, 0, 0.685);
+}
+
+.fa-minus-circle {
+    color: rgba(255, 0, 0, 0.733);
+    margin-left: 30px;
+}
+
+#list {
+    width: 50%;
+    min-height: 60vh;
+    margin: auto;
+    margin-top: 15px;
+    text-align: left;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+h1 {
+    padding-bottom: 20px;
+    border-bottom: 2px solid white;
 }
